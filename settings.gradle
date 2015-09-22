@@ -9,11 +9,7 @@
  * in the user guide at https://docs.gradle.org/2.7/userguide/multi_project_builds.html
  */
 
-/*
-// To declare projects as part of a multi-project build use the 'include' method
-include 'shared'
-include 'api'
-include 'services:webservice'
-*/
-
 rootProject.name = 'idea-nested-git-repo'
+
+include 'lib:common', 'lib:cmd-line', 'lib:config'
+include 'apps:web', 'apps:store', 'apps:analyser'

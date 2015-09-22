@@ -7,3 +7,6 @@
 gradle.properties
 build
 out
+
+apps
+lib
