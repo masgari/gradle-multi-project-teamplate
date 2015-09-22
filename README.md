@@ -4,12 +4,12 @@ A template for creating Gradle multi projects / multi git-repo with initialiser 
 ## Quick start
 
 * Clone the repository
-* Run `./gradle` to see available tasks
+* Run `./gradlew` to see available tasks
 * Edit `settings.gradle`, change project name, modules, etc
   * You can add multiple sub directories (e.g. `'workspace:lib:android:actionbar'`)
 * Edit `.gitignore`, add parent folders of sub-projects according to your project layout in `settings.gradle`  
-* Run `./gradle inP`, it will create sub projects with default files
-* Run `./gradle idea` to create idea project
+* Run `./gradlew inP`, it will create sub projects with default files
+* Run `./gradlew idea` to create idea project
 
 ## Customisation
 Need more default files? add it to the following map in `initProject` task in `build.gradle`
