@@ -22,7 +22,7 @@ subprojects {
     }
 
 
-    task initProject(description: 'Initialize project with sub-projects') { task ->
+    task initProject(description: 'Initialize project with sub-projects') << { task ->
         def dir = task.project.projectDir.path
         new File(dir).mkdirs();
         if (!task.project.childProjects.isEmpty()) {
@@ -55,7 +55,7 @@ subprojects {
 
     }
 
-    task initGit(description: 'create empty git repo for leaf project') { task ->
+    task initGit(description: 'create empty git repo for leaf project') << { task ->
         if (!task.project.childProjects.isEmpty()) {
             println "${task.project.name} has subprojects, ignoring bootstrap .."
             return
